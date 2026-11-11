@@ -231,6 +231,9 @@ h1{font-size:clamp(40px,5.4vw,74px);font-weight:800;margin:22px 0 22px;letter-sp
 .g-more{margin-top:auto;padding-top:8px;color:var(--cyan);font-weight:700;font-size:14.5px}
 @media (max-width:960px){.guides{grid-template-columns:1fr}}
 
+.all-guides{text-align:center;margin-top:28px}
+.all-guides a{color:var(--cyan);font-weight:700;font-size:16px;border-bottom:1px solid rgba(34,211,238,.4)}
+
 /* ---------- donate ---------- */
 .donate{text-align:center;padding:52px 32px;border-radius:28px;border:1px solid var(--line2);
   background:radial-gradient(500px 220px at 50% 0%,rgba(255,92,138,.14),transparent 70%),var(--panel);backdrop-filter:blur(12px)}
