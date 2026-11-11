@@ -10,7 +10,7 @@ const CONFIG = {
   downloadMachine: "https://github.com/zhyk1320-jpg/quicksoundtray/releases/latest/download/QuickSoundTray-Setup-AllUsers.exe",
   // Ссылка на приложение в Microsoft Store (например https://apps.microsoft.com/detail/9XXXXXXXXXXX).
   // Пока пусто — кнопка магазина скрыта.
-  storeUrl: "",
+  storeUrl: "https://apps.microsoft.com/detail/9mvsfks8m8cj",
 };
 
 /* ============================================================
