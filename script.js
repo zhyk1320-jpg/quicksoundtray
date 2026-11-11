@@ -8,6 +8,9 @@ const CONFIG = {
   // просто загрузите в новый релиз файлы с ТЕМИ ЖЕ именами.
   downloadUser:    "https://github.com/zhyk1320-jpg/quicksoundtray/releases/latest/download/QuickSoundTray-Setup.exe",
   downloadMachine: "https://github.com/zhyk1320-jpg/quicksoundtray/releases/latest/download/QuickSoundTray-Setup-AllUsers.exe",
+  // Ссылка на приложение в Microsoft Store (например https://apps.microsoft.com/detail/9XXXXXXXXXXX).
+  // Пока пусто — кнопка магазина скрыта.
+  storeUrl: "",
 };
 
 /* ============================================================
@@ -55,7 +58,7 @@ const I18N = {
     "pr.2":"Усі налаштування зберігаються локально на вашому комп'ютері в теці %LOCALAPPDATA%\\QuickSoundTray і видаляються разом із застосунком.",
     "pr.3":"Цей сайт не використовує cookies і лічильники.",
     "t.title":"Завантаження почалося!","t.sub":"Відкрийте завантажений файл QuickSoundTray-Setup.exe і дотримуйтесь кроків інсталятора.","t.retry":"Завантаження не почалося?","t.link":"Завантажити вручну",
-    "toast.copied":"Пошту скопійовано","toast.soon":"Посилання на завантаження ще не налаштоване",
+    "toast.copied":"Пошту скопійовано","cta.store":"Або встановіть з Microsoft Store","g.kicker":"Інструкції","g.title":"Корисне про звук у Windows","toast.soon":"Посилання на завантаження ще не налаштоване",
   },
   en: {
     "nav.features":"Features","nav.screens":"Screenshots","nav.install":"Install","nav.faq":"FAQ","nav.about":"About","nav.contact":"Contact",
@@ -98,7 +101,7 @@ const I18N = {
     "pr.2":"All settings are stored locally in %LOCALAPPDATA%\\QuickSoundTray and are removed together with the app.",
     "pr.3":"This website uses no cookies or trackers.",
     "t.title":"Download started!","t.sub":"Open the downloaded QuickSoundTray-Setup.exe and follow the installer steps.","t.retry":"Download didn't start?","t.link":"Download manually",
-    "toast.copied":"Email copied","toast.soon":"Download link is not configured yet",
+    "toast.copied":"Email copied","cta.store":"Or get it from Microsoft Store","g.kicker":"Guides","g.title":"Useful tips about Windows sound","toast.soon":"Download link is not configured yet",
   },
   ru: { "toast.copied":"Почта скопирована","toast.soon":"Ссылка на скачивание ещё не настроена" }
 };
@@ -147,6 +150,7 @@ $$(".js-download-machine").forEach(b => { b.href = CONFIG.downloadMachine; b.add
   if (startDownload(CONFIG.downloadMachine)) setTimeout(() => openModal("thanks"), 350);
 });});
 $$(".js-download-raw").forEach(b => { b.href = CONFIG.downloadUser; });
+if (CONFIG.storeUrl) $$(".js-store").forEach(b => { b.href = CONFIG.storeUrl; b.hidden = false; });
 
 /* ---------- modals ---------- */
 function openModal(id){ const m = $("#m-" + id); if (!m) return; m.classList.add("open"); document.body.style.overflow = "hidden"; setTimeout(() => $(".x", m).focus(), 50); }

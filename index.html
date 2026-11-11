@@ -3,13 +3,37 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>QuickSoundTray — компактный микшер звука для Windows</title>
-<meta name="description" content="QuickSoundTray — бесплатный микшер громкости для Windows 10/11: громкость приложений, переключение устройств в 1 клик, выключение микрофона горячей клавишей, звуковые режимы, темы.">
+<title>QuickSoundTray — бесплатный микшер громкости для Windows 10/11</title>
+<meta name="description" content="Бесплатный микшер громкости для Windows 10 и 11: громкость каждой программы отдельно, переключение наушников и колонок в 1 клик, выключение микрофона горячей клавишей, звуковые режимы.">
+<meta name="keywords" content="микшер громкости windows, громкость приложений, переключение звука наушники колонки, выключить микрофон горячей клавишей, замена микшера windows, мікшер гучності windows">
 <meta name="theme-color" content="#05070f">
 <meta property="og:title" content="QuickSoundTray — каждый звук в один клик">
 <meta property="og:description" content="Бесплатный компактный микшер звука для Windows 10/11.">
 <meta property="og:image" content="https://quicksoundtray.com.ua/assets/og.png">
+<meta property="og:url" content="https://quicksoundtray.com.ua/">
+<meta property="og:site_name" content="QuickSoundTray">
+<meta property="og:locale" content="ru_RU">
 <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "QuickSoundTray",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Windows 10, Windows 11",
+  "softwareVersion": "1.3.0",
+  "fileSize": "46MB",
+  "inLanguage": ["ru", "uk", "en", "pl", "zh", "es", "de"],
+  "description": "Компактный микшер громкости в трее Windows: громкость каждого приложения, переключение устройств воспроизведения и записи в один клик, выключение микрофона глобальной горячей клавишей, звуковые режимы и автоприглушение.",
+  "url": "https://quicksoundtray.com.ua/",
+  "downloadUrl": "https://github.com/zhyk1320-jpg/quicksoundtray/releases/latest/download/QuickSoundTray-Setup.exe",
+  "image": "https://quicksoundtray.com.ua/assets/og.png",
+  "screenshot": "https://quicksoundtray.com.ua/assets/shot-mixer.png",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "UAH" },
+  "author": { "@type": "Person", "name": "Zhuk" }
+}
+</script>
 <link rel="icon" href="favicon.ico">
 <link rel="canonical" href="https://quicksoundtray.com.ua/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -107,6 +131,10 @@
           <span class="btn-txt"><b data-i18n="cta.main">Скачать для Windows</b><small data-i18n="cta.sub">Setup · 46 МБ · Windows 10 / 11 x64</small></span>
         </a>
         <a class="alt js-download-machine" href="#" data-i18n="cta.alt">Установщик для всех пользователей (нужны права администратора)</a>
+        <a class="store js-store" href="#" target="_blank" rel="noopener" hidden>
+          <svg viewBox="0 0 24 24" width="20" height="20"><path d="M4 8h16l-1.2 11.2a2 2 0 01-2 1.8H7.2a2 2 0 01-2-1.8L4 8zM8.5 8V6.5a3.5 3.5 0 017 0V8" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          <span data-i18n="cta.store">Или установите из Microsoft Store</span>
+        </a>
       </div>
 
       <ul class="ticks rv d4">
@@ -206,6 +234,21 @@
   </div>
 </section>
 
+<!-- ================= GUIDES ================= -->
+<section class="sec" id="guides">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="kicker" data-i18n="g.kicker">Инструкции</span>
+      <h2 data-i18n="g.title">Полезное про звук в Windows</h2>
+    </div>
+    <div class="guides">
+      <a class="card guide rv" href="guides/gromkost-kazhdoj-programmy-windows.html"><span class="g-tag">Windows 10 / 11</span><h3>Как настроить громкость каждой программы отдельно</h3><p>Встроенный способ Windows и как сделать то же самое в один клик.</p><span class="g-more">Читать →</span></a>
+      <a class="card guide rv d1" href="guides/pereklyuchit-naushniki-i-kolonki-windows.html"><span class="g-tag">Windows 10 / 11</span><h3>Как быстро переключаться между наушниками и колонками</h3><p>Где выбрать устройство вывода и как не лезть каждый раз в настройки.</p><span class="g-more">Читать →</span></a>
+      <a class="card guide rv d2" href="guides/vyklyuchit-mikrofon-goryachej-klavishej-windows.html"><span class="g-tag">Windows 10 / 11</span><h3>Как выключать микрофон горячей клавишей</h3><p>Что умеет Windows сама и как выключать микрофон в любой игре.</p><span class="g-more">Читать →</span></a>
+    </div>
+  </div>
+</section>
+
 <!-- ================= FAQ ================= -->
 <section class="sec" id="faq">
   <div class="wrap narrow">
@@ -258,6 +301,7 @@
     <div class="foot-links">
       <button class="lnk" data-open="about" data-i18n="nav.about">О приложении</button>
       <button class="lnk" data-open="privacy" data-i18n="ft.privacy">Конфиденциальность</button>
+      <a href="#guides" data-i18n="g.kicker">Инструкции</a>
       <a href="https://t.me/Zhukkk_kkk" target="_blank" rel="noopener">Telegram</a>
       <a href="mailto:zhukskyline@gmail.com">Email</a>
     </div>
