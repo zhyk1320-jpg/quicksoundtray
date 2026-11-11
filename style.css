@@ -64,7 +64,7 @@ h2{font-size:clamp(32px,4.4vw,52px);font-weight:800}
 .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;letter-spacing:-.01em}
 .brand img{border-radius:10px;box-shadow:0 0 24px rgba(59,130,255,.45)}
 .links{display:flex;align-items:center;gap:4px;margin:0 auto}
-.links>a,.lnk{padding:8px 14px;border-radius:10px;color:#b9c6e6;font-size:15px;font-weight:600;transition:color .2s,background .2s;display:inline-flex;align-items:center;gap:6px}
+.links>a,.lnk{white-space:nowrap;padding:8px 14px;border-radius:10px;color:#b9c6e6;font-size:15px;font-weight:600;transition:color .2s,background .2s;display:inline-flex;align-items:center;gap:6px}
 .links>a:hover,.lnk:hover,.dd.open .dd-btn{color:#fff;background:rgba(120,170,255,.08)}
 .dd{position:relative}
 .dd-btn svg{transition:transform .25s}
@@ -231,6 +231,23 @@ h1{font-size:clamp(40px,5.4vw,74px);font-weight:800;margin:22px 0 22px;letter-sp
 .g-more{margin-top:auto;padding-top:8px;color:var(--cyan);font-weight:700;font-size:14.5px}
 @media (max-width:960px){.guides{grid-template-columns:1fr}}
 
+/* ---------- donate ---------- */
+.donate{text-align:center;padding:52px 32px;border-radius:28px;border:1px solid var(--line2);
+  background:radial-gradient(500px 220px at 50% 0%,rgba(255,92,138,.14),transparent 70%),var(--panel);backdrop-filter:blur(12px)}
+.donate-ic{width:64px;height:64px;margin:0 auto 18px;border-radius:20px;display:grid;place-items:center;color:#ff6b93;
+  background:rgba(255,92,138,.12);border:1px solid rgba(255,107,147,.35);box-shadow:0 0 40px -6px rgba(255,92,138,.6);animation:beat 2.4s ease-in-out infinite}
+.donate-ic svg{width:30px;height:30px}
+@keyframes beat{0%,60%,100%{transform:scale(1)}20%{transform:scale(1.12)}40%{transform:scale(.97)}}
+.donate>p{color:#a9b7da;font-size:17px;max-width:560px;margin:14px auto 28px}
+.card-num{display:inline-flex;flex-direction:column;align-items:center;gap:6px;padding:20px 30px;border-radius:18px;margin-bottom:14px;
+  border:1px solid var(--line2);background:linear-gradient(135deg,rgba(47,107,255,.18),rgba(31,181,232,.08));transition:.3s var(--ease)}
+.card-num:hover{transform:translateY(-3px);border-color:var(--cyan);box-shadow:0 16px 40px -12px rgba(34,211,238,.5)}
+.cn-bank{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.cn-digits{font-family:"JetBrains Mono",monospace;font-size:clamp(20px,4.6vw,28px);letter-spacing:.06em;color:#fff}
+.cn-act{display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:700;color:var(--cyan)}
+.donate small{display:block}
+.links .nav-heart::before{content:"♥";color:#ff6b93;margin-right:2px}
+
 /* ---------- steps ---------- */
 .steps{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;position:relative}
 .step{padding:34px 28px;border-radius:var(--r);border:1px solid var(--line);background:var(--panel);backdrop-filter:blur(12px);position:relative}
@@ -313,7 +330,7 @@ h1{font-size:clamp(40px,5.4vw,74px);font-weight:800;margin:22px 0 22px;letter-sp
 /* ---------- responsive ---------- */
 @media (max-width:1100px){
   .grid{grid-template-columns:repeat(2,1fr)}
-  .links>a,.lnk{padding:8px 10px;font-size:14px}
+  .links>a,.lnk{padding:8px 8px;font-size:14px}
 }
 @media (max-width:960px){
   .burger{display:block}

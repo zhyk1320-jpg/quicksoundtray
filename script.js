@@ -58,7 +58,7 @@ const I18N = {
     "pr.2":"Усі налаштування зберігаються локально на вашому комп'ютері в теці %LOCALAPPDATA%\\QuickSoundTray і видаляються разом із застосунком.",
     "pr.3":"Цей сайт не використовує cookies і лічильники.",
     "t.title":"Завантаження почалося!","t.sub":"Відкрийте завантажений файл QuickSoundTray-Setup.exe і дотримуйтесь кроків інсталятора.","t.retry":"Завантаження не почалося?","t.link":"Завантажити вручну",
-    "toast.copied":"Пошту скопійовано","cta.store":"Або встановіть з Microsoft Store","g.kicker":"Інструкції","g.1t":"Як налаштувати гучність кожної програми окремо","g.1d":"Вбудований спосіб Windows і як зробити те саме в один клік.","g.2t":"Як швидко перемикатися між навушниками й колонками","g.2d":"Де вибрати пристрій виведення і як не лізти щоразу в налаштування.","g.3t":"Як вимикати мікрофон гарячою клавішею","g.3d":"Що вміє Windows сама і як вимикати мікрофон у будь-якій грі.","g.read":"Читати →","g.title":"Корисне про звук у Windows","toast.soon":"Посилання на завантаження ще не налаштоване",
+    "toast.copied":"Пошту скопійовано","nav.support":"Підтримати","d.title":"Підтримати проєкт","d.sub":"QuickSoundTray безкоштовний і залишиться безкоштовним. Якщо програма виявилася корисною, можна підтримати розробку — це зовсім необов'язково.","d.copy":"Скопіювати номер","d.note":"Переказ з картки на картку. Комісію визначає ваш банк.","toast.card":"Номер картки скопійовано","cta.store":"Або встановіть з Microsoft Store","g.kicker":"Інструкції","g.1t":"Як налаштувати гучність кожної програми окремо","g.1d":"Вбудований спосіб Windows і як зробити те саме в один клік.","g.2t":"Як швидко перемикатися між навушниками й колонками","g.2d":"Де вибрати пристрій виведення і як не лізти щоразу в налаштування.","g.3t":"Як вимикати мікрофон гарячою клавішею","g.3d":"Що вміє Windows сама і як вимикати мікрофон у будь-якій грі.","g.read":"Читати →","g.title":"Корисне про звук у Windows","toast.soon":"Посилання на завантаження ще не налаштоване",
   },
   en: {
     "nav.features":"Features","nav.screens":"Screenshots","nav.install":"Install","nav.faq":"FAQ","nav.about":"About","nav.contact":"Contact",
@@ -101,9 +101,9 @@ const I18N = {
     "pr.2":"All settings are stored locally in %LOCALAPPDATA%\\QuickSoundTray and are removed together with the app.",
     "pr.3":"This website uses no cookies or trackers.",
     "t.title":"Download started!","t.sub":"Open the downloaded QuickSoundTray-Setup.exe and follow the installer steps.","t.retry":"Download didn't start?","t.link":"Download manually",
-    "toast.copied":"Email copied","cta.store":"Or get it from Microsoft Store","g.kicker":"Guides","g.1t":"How to set volume for each app separately","g.1d":"The built-in Windows way and a one-click alternative (article in Russian).","g.2t":"How to switch between headphones and speakers fast","g.2d":"Where to pick the output device without digging into Settings (in Russian).","g.3t":"How to mute your microphone with a hotkey","g.3d":"What Windows can do and how to mute in any game (in Russian).","g.read":"Read →","g.title":"Useful tips about Windows sound","toast.soon":"Download link is not configured yet",
+    "toast.copied":"Email copied","nav.support":"Support","d.title":"Support the project","d.sub":"QuickSoundTray is free and will stay free. If it is useful to you, you can support development — completely optional.","d.copy":"Copy card number","d.note":"Card-to-card transfer (Ukrainian PrivatBank card). Any fee is set by your bank.","toast.card":"Card number copied","cta.store":"Or get it from Microsoft Store","g.kicker":"Guides","g.1t":"How to set volume for each app separately","g.1d":"The built-in Windows way and a one-click alternative (article in Russian).","g.2t":"How to switch between headphones and speakers fast","g.2d":"Where to pick the output device without digging into Settings (in Russian).","g.3t":"How to mute your microphone with a hotkey","g.3d":"What Windows can do and how to mute in any game (in Russian).","g.read":"Read →","g.title":"Useful tips about Windows sound","toast.soon":"Download link is not configured yet",
   },
-  ru: { "toast.copied":"Почта скопирована","toast.soon":"Ссылка на скачивание ещё не настроена" }
+  ru: { "toast.copied":"Почта скопирована","toast.card":"Номер карты скопирован","toast.soon":"Ссылка на скачивание ещё не настроена" }
 };
 
 const $ = (s, r = document) => r.querySelector(s);
@@ -176,6 +176,12 @@ $("#copyMail").addEventListener("click", async () => {
   const mail = "zhukskyline@gmail.com";
   try { await navigator.clipboard.writeText(mail); toast(t("toast.copied")); }
   catch(e) { location.href = "mailto:" + mail; }
+});
+
+/* ---------- copy card ---------- */
+$("#copyCard").addEventListener("click", async () => {
+  try { await navigator.clipboard.writeText("4149497568120812"); toast(t("toast.card")); }
+  catch(e) { toast("4149 4975 6812 0812"); }
 });
 
 /* ---------- hero slideshow + tilt ---------- */
